@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fortune Master</title>
+  <style>
+    body {
+      background: url('https://www.w3schools.com/w3images/wood.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+    }
+
+    .fortune-box {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 400px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #ff66b3;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #ff66b3;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff3385;
+    }
+
+    .message {
+      font-size: 20px;
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="fortune-box">
+    <h1>Fortune Master</h1>
+    <button onclick="showMessage()">Get Your Cutie Message</button>
+    <p class="message" id="fortune-message"></p>
+  </div>
+
+  <script>
+    // Array of 50+ messages (replace with your own messages)
+    const messages = [
+      "Hey cutie, you are the most amazing person in my life. Every day with you feels like a beautiful adventure. 💖",
+      "You make my world a better place just by being in it. 🌟",
+      "Every moment with you is a precious gift. I'm so lucky to have you! 💫",
+      "Your smile lights up my day, and your love fills my heart. 💞",
+      "You are my everything, and I am so grateful to call you mine. 💘",
+      "With you, I feel like I can conquer anything. You make me stronger. 💪",
+      "I never knew true happiness until I met you. You complete me. 💝",
+      "You are the reason I smile every day. I love you more than words can express. 😘",
+      "Every time I think of you, my heart skips a beat. 💓",
+      "Being with you feels like a dream come true. I can't wait for more memories together. ✨",
+      "You are my sunshine on the darkest days. 🌞",
+      "No matter where life takes us, I will always cherish you. 💑",
+      "Your love is my favorite melody. 🎶",
+      "In your eyes, I see my future, and it’s beautiful. 👀",
+      "You make everything better, just by being yourself. 😍",
+      "Your love is a treasure that I hold close to my heart. 💎",
+      "I’m so grateful for every moment spent with you. You make life extraordinary. 🌹",
+      "Your presence brings me peace. You are my calm in the storm. 🌸",
+      "Every day with you is an adventure I wouldn’t trade for anything. 🏞️",
+      "You are my best friend and my greatest love. 💖",
+      "No matter what happens, you will always be my heart's true home. 🏡",
+      "You make even the ordinary moments extraordinary. 💫",
+      "You are the reason I believe in love. 💗",
+      "I can’t imagine my life without you in it. You are my everything. 🌈",
+      "Your laugh is my favorite sound in the world. 😂",
+      "I fall in love with you more and more each day. 💘",
+      "Your love makes me feel alive and unstoppable. 🏃‍♀️💨",
+      "You are the best part of my day, every day. 🌅",
+      "Every time I hold your hand, I feel like I’m home. 🤝",
+      "With you by my side, there’s nothing I can’t do. 💪",
+      "You make life so much more beautiful. 💐",
+      "I love the way you make me feel like the most special person in the world. 🌍",
+      "You are the light that guides me through the darkest times. ✨",
+      "Your kindness and love make the world a better place. 🌍💖",
+      "You have a heart of gold, and I’m lucky to have it in my life. 🌟",
+      "You’re my forever and always. 💍",
+      "I’m so proud of everything you do. You’re my inspiration. 🌟",
+      "I’ll always be here for you, no matter what. 💕",
+      "You are my happiness, my joy, my everything. 💖",
+      "I’m so blessed to walk through life with you by my side. 👫",
+      "Every time I look at you, I see the love of my life. 💕",
+      "You make me want to be the best version of myself. 🌟",
+      "Your love is my anchor, my rock. ⚓",
+      "When I’m with you, I feel like the luckiest person alive. 🍀",
+      "Your love is the most beautiful thing that’s ever happened to me. 🌷",
+      "I’m not complete without you. You make me whole. 💖",
+      "Your love is the greatest gift I could ever ask for. 🎁",
+      "Every day with you is a new chapter of joy and love. 📖",
+      "You are the love story I never want to end. 📚",
+      "You are my heart’s true desire. 💓",
+      "You are the best thing that ever happened to me. 💫",
+      "You make my world a brighter place just by being in it. 💡",
+      "Every moment with you is a blessing. 🙏",
+      "I never want to imagine a life without you. You are everything to me. 💖",
+      "You make my heart sing. 🎶💖",
+      "You are the reason my heart beats. 💓"
+    ];
+
+    function showMessage() {
+      // Generate a random index from the messages array
+      const randomIndex = Math.floor(Math.random() * messages.length);
+      // Display the message
+      document.getElementById("fortune-message").innerText = messages[randomIndex];
+      document.getElementById("fortune-message").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
